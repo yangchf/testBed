@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style1.css" />
+    <title>html5 input</title></head>
+<body>
+    <h1>test1</h1>
+    <p>test2</p>
+    <a href="http://www.google.com" target="_blank">visit google.com!</a></br>
+    <img src="tulip.jpg" alt="tulip"  width="400" height="266"  />
+    <section id="input-app">
+        <form action="basic.php" name="form1">
+        <label for="username">
+            Name</label>
+        <input type="text" name="username" id="username" required="required" /><br />
+        <label for="age">
+            Age</label>
+        <input type="number" name="age" id="age" min="0" max="100" required="required" /><br />
+        <label for="email">
+            Email</label>
+        <input type="email" name="email" id="email" required="required" /><br />
+        <label for="email">
+            Password</label>
+        <input type="password" name="password" id="password" required="required" /><br />
+        <label for="url">
+            Home Page</label>
+        <input type="url" name="url" id="url" /><br />
+        Country
+        <select name="country">
+            <option value="China">China</option>
+            <option value="Japan">Japan</option>
+            <option value="Korea">Korea</option>
+        </select>
+        <br />
+        <label for="memo">
+            Introduction</label>
+        <textarea name="memo" id="memo" cols="30" rows="10"></textarea><br />
+        <input type="submit" value="Submit" />
+        </form>
+    </section>
+</body>
+</html>

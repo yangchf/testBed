@@ -1,0 +1,89 @@
+{
+    "name": "184.72.243.158:8080",
+    "headers": [],
+    "enableFlash": true,
+    "configurations": [{
+        "name": "http://www.gomez.com/settings/gsl_version",
+        "value": "2"
+    },
+    {
+        "name": "http://www.gomez.com/settings/browser_version",
+        "value": "IE7"
+    }],
+    "steps": [{
+        "description": "web elements",
+        "url": "http://184.72.243.158:8080/hosted/get/htmlelements.html",
+        "actions": [{
+            "url": "http://184.72.243.158:8080/hosted/get/htmlelements.html",
+            "targetWindow": "gomez_top[0]",
+            "type": "navigate"
+        },
+        {
+            "criteria": "page_complete",
+            "type": "wait"
+        }]
+    },
+    {
+        "description": "Welcome",
+        "url": "http://184.72.243.158:8080/hosted/get/action.jsp?name=input+type+is+taext&text2=input+type+is+text2&textarea=This+is+a+Textarea.&SelectBox=one&SelectGroup=1111&Submit=Submit",
+        "actions": [{
+            "target": {
+                "targetWindow": "gomez_top[0]",
+                "locators": [["css", "input[type=\"text\"][name=\"name\"]"], ["dom", "document.forms[\"myform\"][\"name\"]"], ["css", "#myform table tbody tr td:eq(1) input"]]
+            },
+            "x": 80,
+            "y": 20,
+            "type": "click"
+        },
+        {
+            "target": {
+                "targetWindow": "gomez_top[0]",
+                "locators": [["css", "input[type=\"text\"][name=\"name\"]"], ["dom", "document.forms[\"myform\"][\"name\"]"], ["css", "#myform table tbody tr td:eq(1) input"]]
+            },
+            "value": "`parameters['FormParameter']`",
+            "type": "setInputValue"
+        },
+        {
+            "target": {
+                "targetWindow": "gomez_top[0]",
+                "locators": [["css", "#myform"], ["dom", "document.getElementById(\"myform\")"], ["dom", "document.forms[\"myform\"]"], ["css", "html body form"]]
+            },
+            "x": 830,
+            "y": 27,
+            "type": "click"
+        },
+        {
+            "target": {
+                "targetWindow": "gomez_top[0]",
+                "locators": [["css", "html"]]
+            },
+            "modifiers": [],
+            "type": "keystrokes",
+            "keyCodes": [35],
+            "charCodes": [0],
+            "selectionStart": [0],
+            "selectionEnd": [0]
+        },
+        {
+            "target": {
+                "targetWindow": "gomez_top[0]",
+                "locators": [["css", "input[type=\"submit\"][name=\"Submit\"]"], ["dom", "document.forms[\"myform\"][11]"], ["css", "#myform table tbody tr:eq(12) td:eq(1) input"]]
+            },
+            "x": 38,
+            "y": 20,
+            "type": "click"
+        },
+        {
+            "criteria": "page_complete",
+            "type": "wait"
+        }]
+    }],
+    "parameters": [{
+        "name": "FormParameter",
+        "value": "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890123456789`~!#$%^&*()-_=+\\|]}[{;:'\"/?.>,<"
+    }],
+    "dns": [],
+    "clientCerts": [],
+    "enableForMobile": false
+}
+

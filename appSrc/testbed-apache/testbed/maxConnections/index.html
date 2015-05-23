@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test Parallel connections</title>
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript">
+    var counter = 0;
+    var secsPerImage = 10;
+    var request = {};
+    function finish() {
+      $("#result").html("Your browser seems to use " + counter +
+                               " simultaneous connections to this server.");
+    }
+    function createRequest(i){
+    	 
+       request[i] = false;
+       try {
+         request[i] = new XMLHttpRequest();
+       } catch (trymicrosoft) {
+     try {
+       request[i] = new ActiveXObject("Msxml2.XMLHTTP");
+     } catch (othermicrosoft) {
+       try {
+         request[i] = new ActiveXObject("Microsoft.XMLHTTP");
+       } catch (failed) {
+         request[i] = false;
+       }  
+     }
+    }
+      var url = "./slow.php?&skipcache=" + Math.random();
+      request[i].open("GET", url, true);
+      request[i].onreadystatechange = function(){
+       if (request[i].readyState == 4){
+          if(request[i].status == 200){
+            counter++;
+          }
+       }
+ 
+      };
+      request[i].send(null);
+    }
+   
+
+  $(document).ready(function() {
+    for (var i = 0; i < 20; i++ ){
+      createRequest(i);
+     }
+    setTimeout(finish, secsPerImage * 1000);
+  });
+  </script>
+  <style type="text/css">
+    img {
+      border: medium dashed olive;
+    }
+    #result {
+      margin: 1em;
+      padding: 1em;
+      border: thick solid navy;
+      font-size: x-large;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<div id="result">
+Loading, please wait...
+</div>
+</body>
+</html>
+
+

@@ -1,0 +1,35 @@
+<html>
+<body bgcolor="silver">
+
+<script type="text/javascript">
+function onEvent(event, targetClass, targetName) {
+   var result = document.getElementById("result"); 
+
+   if (!/mouse(move|up|down)|mouseover|mouseout|rollout|rollover/.test(event.toLowerCase())) {
+      result.innerHTML = event + ", target.class=" + targetClass + ", target.name=" + targetName;
+   } 
+}
+</script>
+
+<table>
+<tr><td>wmode="windowed"</td><td>wmode="transparent"</td><td></tr>
+<tr><td>
+<embed 
+   height="300px" width="300px" wmode="windowed" allowfullscreen="true" quality="high" 
+   bgcolor="#FFFFFF" name="windowed" id="windowed"  src="test_gswf_controls.swf" 
+   type="application/x-shockwave-flash"
+>
+</td>
+<td>
+<embed 
+   height="300px" width="300px" wmode="opaque" allowfullscreen="true" quality="high" 
+   bgcolor="#FFFFFF" name="transparent" id="transparent"  src="test_gswf_controls.swf" 
+   type="application/x-shockwave-flash"
+>
+</td>
+</tr></table>
+<div id="result"></div>
+
+
+</body>
+</html>

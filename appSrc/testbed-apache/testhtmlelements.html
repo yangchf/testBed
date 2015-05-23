@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>web elements</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=UTF-8"></HEAD>
+
+<BODY >
+<form id="myform" action="action.jsp" method="post">
+<TABLE style="PADDING-TOP: 3px;margin:12px 5% 12px 10%" cellSpacing=0 cellPadding=0 width=700 border=1>
+  <tr>
+  	 <td align=center> text </td>
+  	 <td align=center> <input type="text" name="name" value="input type is text" /></td>
+  </tr>
+  <tr>
+  	 <td align=center> passwd </td>
+  	 <td align=center> <input type="password" name="password" value="input type is password"> </td>
+  </tr>  
+  
+  <tr>
+  	 <td align=center> checkbox </td>
+  	 <td align=center> Checkbox One <input type="checkbox"  name="checkboxone"/>
+         <br>
+         Checkbox Two <input type="checkbox" name="checkboxtwo"/>
+     </td>
+  </tr>    
+  <tr>
+  	 <td align=center> radio </td>
+  	 <td align=center> Radio One <input type="radio"  name="RadioOne"/>
+         <br>
+         Radio Two <input type="radio"  name="RadioTwo"/>
+     </td>
+  </tr>   
+   <tr>
+  	 <td align=center> select box </td>
+  	 <td align=center> Select Box:
+  	 	   <select name="SelectBox">
+         <option value="one">one</option>
+         <option value="two">two</option>
+         <option value="three">three</option>
+         <option value="four">four</option>
+         </select>
+     </td>
+  </tr> 
+  <tr>
+  	 <td align=center> select box with optgroup </td>
+  	 <td align=center> selectBox with optgroup:
+         <select name="SelectGroup">
+           <optgroup label="Group One">
+              <option value="1111">1111</option>
+              <option value="2222">2222</option>
+           </optgroup>
+           <optgroup label="Group two">
+              <option value="3333">3333</option>
+              <option value="4444">4444</option>
+           </optgroup>
+         </select>  	 	 
+  	 </td>
+  </tr>
+
+ 
+   <tr>
+  	 <td align=center>textarea </td>
+  	 <td align=center> Textarea:
+         <textarea rows="3" cols="30">This is a Textarea.</textarea>     
+
+     </td>
+  </tr>  
+ 
+    <tr>
+  	 <td align=center> Button </td>
+  	 <td align=center> Button : <input type="button" value="Click me" onclick=window.open("action.html")>
+     </td>
+  </tr> 
+ 
+     <tr>
+  	 <td align=center>File</td>
+  	 <td align=center> Please type the file path: <input type="file">
+     </td>
+  </tr> 
+  
+     <tr>
+  	 <td align=center>Image</td>
+  	 <td align=center> <input type="image" src="./image/header_logo.gif" >
+     </td>
+  </tr> 
+  
+   <tr>
+  	 <td align=center>Hidden</td>
+  	 <td align=center>Here is a hidden label which name is "hiddenLabel" and value is "I am hidden" <input type="hidden" name="hiddenLabel" value="I am hidden">
+     </td>
+  </tr> 
+  
+  
+  <tr>
+  	 <td align=center>submit button </td>
+  	 <td align=center> <input type="submit" name="name" value="Submit" /></td>
+  </tr>
+  <tr>
+  	 <td align=center>reset button </td>
+  	 <td align=center> <input type="reset" name="name" value="Reset" /></td>
+  </tr>
+  	
+</TABLE>
+</form>
+
+<script language="JavaScript" type="text/javascript">
+
+   objBox = document.getElementsByName('SelectBox')[0].options[1];
+   objGroup = document.getElementsByName('SelectGroup')[0].options[1];
+   alert("box value :" + objBox.value);
+   alert("group  value :" + objGroup.value);
+<!--   alert("box click function ? " + objBox.click);
+   alert("group click function ? " + objGroup.click); 
+-->
+</script>
+
+
+
+</BODY></HTML>	
+	

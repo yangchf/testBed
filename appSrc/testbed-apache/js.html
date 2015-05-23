@@ -1,0 +1,34 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>get name </title>
+</head>
+
+<body>
+<script type="text/javascript" language="javascript">
+function isRegisterUserName(s)
+{
+var patrn=/^\d+/;
+<!--
+var patrn = /^\d+;[\w\W]+/;
+-->
+var patrn=/^\d+$/;
+if (!patrn.exec(s)) return false;
+return true;
+}
+
+if (isRegisterUserName("10099aa") == true){
+
+   document.write("it is true");
+
+} else {
+   document.write("it is false");
+}
+
+
+</script>
+</body>
+
+</html>
+

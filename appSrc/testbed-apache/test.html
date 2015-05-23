@@ -1,0 +1,40 @@
+  <html>
+     <head>
+         <title> document.links[].href</title>
+    <!--     <script src="http://www.gomeznetworks.com/utajs/GomezGlobalFunctions.008.js" type="text/javascript"></script>
+     -->
+         <script src="GomezGlobalFunctions.008.js" type="text/javascript"></script>
+     </head>
+     <body>
+         <a  href ="http://www.gomez.com"> link </a><p>
+         <script  type ="text/javascript">
+         
+
+           for(var i in document.documentElement) {
+                  document.write("function :" + i + " ||<br>");
+
+}
+  <!--
+            document.write( "origin url :"   +  document.links[0].href  +   " <br> " );
+            document.links[0].href  =   "http://184.72.243.158/" ;
+            
+		function clickText( linktext) {
+		var dom = document.links;
+		 for (i = 0; i < dom.length; i++) {
+		   if (dom[i].innerHTML.indexOf(linktext) != -1) {
+			alert("i ==" +i);	
+		     return i;
+   		}
+ 		}
+			alert("i == -1");
+		 return -1;
+		}
+		alert(document.links[0]);
+document.links[clickText('link')].click();
+		alert("next");
+		document.write("modified url : "   +  document.links[0].href);
+		alert("last");
+          -->
+         </script>
+     </body>
+</html> 

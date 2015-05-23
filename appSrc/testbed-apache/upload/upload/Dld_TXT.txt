@@ -1,0 +1,145 @@
+Module Two: Configuring the Gomez Performance Network (GPN).
+
+In this module we will be looking at how to administer the GPN.  First we will go over a quick review of the portal, and then we will walk through how to configure your tests.
+
+The Gomez Performance Network, or GPN, is the service that collects and reports URL and transaction performance from tens of thousands of collection points located on the Internet's backbone networks, across the "last mile" to actual end-user PCs, and behind company firewalls. This data enables you to monitor and manage in real-time and evaluate historical trends to take action and improve the delivery of your transactions, ultimately enhancing customer experience and boosting the overall effectiveness of the Internet channel.
+
+To access the Gomez Performance Network, open a browser window, navigate to http://www.gomez.com and click on the ¡°Client Login¡± tab in the upper-right corner.  Enter your username and password and then click ¡°Submit¡±.
+
+Start Page
+The Start Page is your primary entry point within the GPN site and provides the ability to quickly chart any test or transaction, conduct an instant test, or see any recent alerts. The main areas of the Start Page are the Status Report, Saved Charts, Recent Alerts, GPN News and Diagnostics.
+
+Backbone
+Backbone Monitoring allows you to monitor your Web site¡¯s availability and responsiveness from over 50 locations spanning more than a dozen Internet Backbones.  The Backbone tab is one of the most commonly used sections of the GPN service because it offers a wide range of charting possibilities for Single URL and Transaction tests. Access to the underlying detailed data for each test run is available for 33 days and trending data is available for 1 year.  The four main sections of the Backbone are: Diagnostics (where you are able to generate your chart analyzed data), Saved Charts (where you can access previously created charts), Data View ( Where you can drill down into the data in a table format) and Trending (where you are able to access up to one year of trending data).
+
+Last Mile
+Last Mile Monitoring provides real-time measurements through local and enterprise access providers to end-user desktops.  The data collected by these PEERs reveals what actual customers experience while visiting and transacting on your site. This "last mile" perspective is enabled through a distributed network of 10,000-plus PCs around the world -- representing all types of Internet connections and a vast array of geographies. Last Mile also supports deployment, management and reporting of Private Peer networks (Private Peer network solutions enable IT operations to remotely monitor Web applications across distributed private networks such as branch offices, in-store kiosks, across supply chains and decentralized work forces).  The data collected from the Last Mile and Private Peer networks is accessible from the Last Mile tab.  The four main sections of the Last Mile tab are the same as the backbone: Diagnostics, Saved Charts, Data View and Trending.
+
+Alerts
+The Alerts tab gives you quick access to viewing and enabling alerts on your Backbone tests.  From the Alerts Log section, you can view a list of all alerts that have been sent for your tests.
+
+Reports
+The Reports tab allows you to create and send Summary reports to members of your organization.  These reports include the GPN Summary Report, the End-to-end Time Report, the Perspective Report, and the Benchmark Report.
+
+My Settings
+Each of the tabs in the GPN gives you access to the performance and availability data that was collected by the tests configured in your account.  The configuration and administration settings for your account are accessible from the My Settings button in the upper-right corner of the GPN.
+
+My Settings is organized into 5 sections.  At the top of the page, you will see a summary of your account.  This includes the number of tests that were purchased and are currently available for configuration, the name of your Gomez Account Manager, and if you are not the Primary User for your account, you will also see the name of your internal account contacts.
+
+Beneath the account information are the Test Admin, Measurement Locations, Account Management, and Utilities sections.
+
+The Test Admin section provides links to configure and add tests for each of the Gomez Networks.
+
+Within the Measurement Locations sections you can review current node status and IP Address information for the Backbone nodes, remove nodes from the tests in your account, and create Peer populations for Last Mile and Private Peer Testing.
+
+The Account Management section allows Admin and Power End User level users to create preferences, add/edit employee access, review event logs and add or edit annotations.
+
+The Utilities section allows clients to download the G¨®mez Script Recorder. The G¨®mez Script Recorder allows clients to record multi-page transactions and upload them to the GPN for monitoring.
+
+Test Configuration: Backbone
+Now that you are familiar with the GPN portal, we will walk through how to configure your tests, starting with the Backbone.
+
+To add a new Backbone test, click on the ¡°Add/Edit Backbone Tests¡± link in the Test Admin section of My Settings.  From the Add/Edit Tests page, click on the ¡°Add Backbone tests¡± link (at the top).
+
+The Add Backbone Tests form contains several settings that you can configure initially for your new test.  First, specify the URL or transaction that you would like to test.  It is important to note that the Transaction option will only appear if you have already recorded and uploaded a script from the Gomez Script Recorder.
+
+For this example, we will create a single URL test for http://www.google.com.
+
+For both the Single URL and Transaction tests, you can choose to run the test with all page objects, or with no page objects.  For a Single URL, running with all page objects will test the URL every hour from each node that is selected.  This option will ensure that in addition to the base HTML page, any objects referenced on the page, for example images, will be downloaded and measured for each test execution.  The ¡°no page objects¡± option will download and measure only the base HTML page of the URL, but will be run more frequently (every 5 minutes) from the selected nodes.  For this example we will run the test with all page objects.
+
+After configuring the URL or Transaction, enter the test name that you want to use to identify the test.  For this example I am going to name the test ¡°google home page.¡±
+
+If you would like the test to run for a set period of time, you can specify an Expiration date.  Once a test expires, the status of the test will be changed to inactive.  This stops the test from running, but preserves any historical data that was collected.
+
+The ¡°Assign to a Folder¡± setting allows you to better organize your tests.  If you are testing multiple web applications, you may want to create a folder for each application and put your new tests in the respective folder.  To do this, click on the ¡°Add to folder¡± radio button and select and existing folder from the drop-down field.  To add the test to a new folder, choose the ¡°Add to new folder¡± radio button, and type a unique folder name.  I¡¯m going to add this test to a folder named ¡°Web Search.¡± 
+
+Finally, the Define Status setting will allow you to either activate the test with the default settings, or add the test with Inactive status and configure later.  If you choose to activate the test, all other test settings, including the nodes that the test will run from, will be inherited from the default values that have been configured for your account.
+
+For this example, we will choose the ¡°Add with Inactive status and configure later¡±.  When you have finished configuring the new test, click the ¡°Submit¡± button.
+
+Once your new test has been added, you will be redirected to the Add/Edit Tests page.  In the ¡°All Backbone Tests and Folders¡± list, you will see your new test in the folder that it was entered.  The gray color of the test and the asterisks signifies that the test is currently inactive.  
+
+In the Backbone Tests and Folders list, Single URL tests are designated by a single dot (on the left), Transaction tests are designated by a double dot, and folders are designated by an arrow.  When you click on the + symbol next to a folder, the folder will expand to show you the tests within.
+
+Edit Test
+To configure an existing test or folder, click on the test name in the list on the left, and use the arrow button to move the test to the ¡°Selected Tests or Folder to edit¡± list.  I am going to select ¡°google home page¡± and move it to the right-hand side.  Multiple tests can be edited at a time by moving more than one test to the list on the right.  It is important to note, that when configuring multiple tests, the tests must be of the same type, for example Single URL or Transaction.
+
+After you have selected the desired test, click the ¡°Edit¡± button.  In this example, I will select the test that was just created.
+
+After clicking the ¡°Edit¡± button, you will be presented with the ¡°Edit Backbone Single URL¡± screen.  Here you can choose the settings that you would like to configure.  In this example, we are going to click the ¡°select all¡± radio button so that we can discuss each of the settings available.  After making your selection, click ¡°Continue¡±.
+
+On edit Backbone single URL page, you are going to see settings that are broken into different sections: test configuration for name, status, folders, etc¡­  You also have settings for configuring your alerts.  We are going to start at the top and work our way down.
+
+First, any time you edit a backbone test, you have the option to modify the name and the URL.  If you are going to modify the URL of a test, there will be warning when you submit the form letting you know that you will be collecting data from a different application/URL, and you may want to reconsider this.  The reason is that if your test has been previously running, and you are collecting data from, for example, www.google.com, if we now come in and change this to collect data from www.yahoo.com , because it¡¯s the same test, the data from each URL is stored together.  Therefore your historical data will not be cohesive.  
+
+If you want to change a URL pointing to the same page in your application, go ahead and change the URL.  However, if you want to change the URL to point to a completely different page or application, change the status of the current test to ¡°inactive¡±, and then add a new test for the new URL.  
+
+Our next setting is ¡°status¡±.  Currently our status is inactive, to activate your test, choose ¡°active¡± radio button.  Your test will run immediately once you submit your changes, or in the next test cycle if your test has been activated previously.  The inactive status means your test is not currently running, however you still have access to historical data.  When you delete a test this will not only stop the test from running, but it will also delete all historical data.  NOTE:  Please be careful not to delete useful information.
+
+Next we have the User Agent.  The User Agent is for the http header info that is sent to the application in a request.  The user agent is telling the app what browser the request was made from.  There are several here that you can choose from in the drop-down box, and you¡¯ll notice that the majority of them contain Gomez Agent 1.0 in the User Agent String.  This is often used so that companies can remove traffic from their web information, or allow access through their fire-wall for requests coming from Gomez.  Another way to achieve this is to look at the nodes list under My Settings.  In that node list are the IP addresses for each of the nodes, and you can remove traffic from your web trends information, or open up the firewall for traffic coming from those IP addresses.  
+
+Another reason the User Agent is important is that a lot of applications are going to vary their response to a request based on the browser that was requesting the page.  The User Agent can be used to determine the response time for a certain subset of users from a common browser.          
+
+The next setting is the node selection.  This is a list of which nodes your test is going to run from.  For the Backbone tests your test is going to run once every period that is selected, in this case 60 minutes, from every node that is in the ¡°node selected for data collection¡± field.  To add or remove nodes from this list just click on the nodes and use the arrows that point to the left and right to move the test out of the available nodes list into node selected list or vice versa.  
+
+Now we are going to jump into the alerting portion of the configuration.  There are four things you need to configure to make sure your alerts will be sent.  First you have your status thresholds, which change the status of each individual node based on the results of individual test runs.  For example, if you¡¯re running from each of the twelve nodes above selected for data collection, each node is going to keep track of what the last result was for this test.  The status thresholds can be set for response time tests, response time thresholds, or for failure thresholds.  The different types of alerts you can be sent are listed (scroll down), you¡¯ll see there are the alert activations.  Here we have listed the five types of alerts that can be sent.  For total page host failure alerts and page inaccessible alerts, there are no thresholds to be configured.  These tests are either of pass or fail status, depending on which result is returned from the server.  So no configuration is needed for those two alerts. For the page object error alert, you will have to specify which percentage or number of objects referenced on the page need to fail before this test is considered to have the status of failed.  
+
+Next we have the response time alert, here you need to configure what your response time thresholds are, in either seconds, or percentage above the historical average for response time, in order to trigger the status to change from good to either warning or severe.  
+
+Finally you have the content match alert, for this test you need to configure a string that will be searched for on the page that is returned.  If the string is found that status will be passed, if the string is not found, the status is failed.  
+
+Let¡¯s take a look at the three thresholds we need to set for the last three alerts.  First we have the response time threshold, and here you¡¯ll notice there are two options: dynamic or static.  The static threshold is very easy to configure, all that is needed is a set number of seconds viewer response time can¡¯t exceed.  If the response time is exceeded, the status for that node threshold is going to change from good to warning, or severe.  With the static threshold all nodes are going to be held at the same standard.  
+
+If you do not have a set SLA, or you want your nodes to be held to different standards based on location, or historical performance, you can instead use the dynamic response threshold.  Here you¡¯re going to be able to have each of the nodes calculate their own current and historical averages, and it will compare the difference between the two averages, and that difference is then compared thresholds you entered (warning and severe).  For example, if we have warning and severe thresholds of 6 and 8 seconds, respectively, and the current average of this test over the past five minutes 6.5 seconds, and the historical average is 5 seconds.  Well, in order to have the test fail around six seconds we need to take the difference.  6.5-5=1.5 seconds, so I might want to be warned if my historical average is any more than one second less than the current average.  
+
+So, in review, for dynamic thresholds each node keeps track of its own historical and static average (so they¡¯re not held to a stringent standard), while static thresholds test a specific number of seconds to a response time threshold you have set.  
+
+Next we have the Object error thresholds; again, this threshold is going to be exceeded if a certain number or percentage of objects referenced on the base page is not returned correctly.  
+
+Next we have the content match test; here we can just enter in text that we want to be matched on the page.  For example, we want to be sure that the word ¡°google¡± appears somewhere on the page.  If that text does not appear, the test will fail; otherwise it will remain in ¡°passed¡± status.
+
+For the time we will skip over the health monitor, because it is not related to the alerting.   
+
+Let¡¯s take a look at the alert activations.  Remember, there are four things that need to be configured in order for alerts to be sent.  We¡¯ve just taken a look at the status thresholds; now let¡¯s look at the alert activation.  Once you have the status thresholds set up, you need to make sure the alerts are activated, if they are not turned on, you are not going to receive alerts, so to turn on alerts, and you must click on the radio buttons to switch it from ¡°off¡± to ¡°on¡±.
+
+The third thing that needs to be configured before alerts can be sent is the node threshold (remember:  each of the nodes are keeping track of their status, and what you can do is specify is, if more than ten percent of my nodes are in a status other than good or pass, that¡¯s when I want to be notified.)  This setting can allow you to increase or decrease the sensitivity of your alerts, so, for example, if you enter in 1 for the number of nodes that must in an error status for an alert to be triggered, that means any time your response time exceeds the thresholds or any time a page is not able to be returned, you will be alerted.  Warning:  Sometimes this is not a good idea, if the problem is on one node, it is highly unlikely that the problem is due to the application, by increasing this number (depending on how many nodes you are running off of) you will ensure that the problem is occurring in more than one location.  These global problems (when many nodes are triggered) are of much greater concern than just single node failure.  
+
+For each type of alert, make sure you have the node thresholds set
+
+The fourth thing you need to configure before the alert is sent is the Alerts Notification.  
+
+This is the information for where the alert is going to be sent, and how often.  So, here you are going to enter-in your email recipients list.  You¡¯ll notice that for all of the different types of alerts you have the option for both an email recipient, and pager recipient.  Pager recipients receive a shorter message stipulated by the limits of the instant message text.  
+
+Next we have to choose how frequently we want to be alerted.  By default we are only going to be alerted on change during the incident, this means that any time the status changes from good, to warning, to severe, to fail, then back to pass again, you will be alerted.  You also have the option to continue to be alerted throughout the incident, so let¡¯s say that the incident lasts for twelve hours, maybe you want a reminder email every hour to let you know that the site is still failing, or still in an error condition.  In order to do that, choose how frequently you want to be alerted during the incident.  (WARNING:  If your test is running once an hour, it would be a bad idea to set your alert frequency to every five minutes, because once your tests run, it will be an hour before those tests run again, and so it will be an hour before the status changes.  An example would be an error occurs, and you are alerted every five minutes of the same failure, until an hour passes and the test is run again.)  It is recommended that you set your alert frequency, if you want the reminders, to the same frequency at which you are testing.  
+
+That completes Alert Notification.
+
+Finally, we have the maintenance window.  The maintenance window is going to allow you to turn off testing and alerting during a set period of time so that you can run maintenance on the site, upgrade the database, etc¡­  So if you¡¯re going to be doing maintenance on your application, and you don¡¯t want testing and alerting to occur during that time period, all you have to do is choose the day, start, and end time, and during that period no tests will be run, and no alerts will be sent.  This can happen on a reoccurring basis, so if, for example, every Sunday from 2 p.m. to 4 p.m. you have a maintenance window, you can incorporate that into your testing so you don¡¯t get false alerts during that period of time.  
+
+Once you are finished configuring your test, what you want to do is click the submit button to submit your changes.  Once you have submitted your changes you should see, if you change the status of your test, that change reflected in the Backbone test and folders field under the add/edit tests page.
+
+If we expand on web-searches, you will see the ¡°google home page¡±, which is active, because it¡¯s not gray.  
+
+Now we¡¯re going to switch gears and show how to configure a last mile test.  To do this we¡¯re going to back to the ¡°My Settings¡± screen, and start off by showing you how to add a PEER population.  This is seen under the measurement location section if you click on view, edit, PEER populations.  Now, the way that last mile is set-up, there is a public network of many thousands of end user machines to run your tests.  A PEER population is a subset of that entire population.  So, for example, you see in this PEER population list the PEERs are broken down into categories of geography, and bandwidth speed.  The first one I have is Asia, high-broadband.  That means if I choose to run my test from this population it will only run from machines in Asia that have a high-broadband connection.  So, if you want, you can use the default PEER populations that appear at the top, but you also have the ability to create your own PEER populations.  To create a new PEER population, you want to click on the link, ¡°Create a new PEER population.¡±  
+
+First you want to give your PEER population a name; I am going to choose the name Europe Highbroadband2.  
+
+Next you want to choose which category you want to filter your PEER population by.  We¡¯re going to start with country, which is already in our criteria list, and I¡¯m going to choose a few countries from Europe.  I will choose France, The United Kingdom, and Germany.  Next you want to filter even further by choosing the bandwidth category.  Select bandwidth category, and click the button with the right arrow in order to refresh your available criteria list.  Now I will choose high-broadband, and move it to include it in my criteria.  
+
+
+Now I¡¯m finished, and when I run this test against this population, it¡¯s going to run from machines in France, Germany, and the United Kingdom that have a high-broadband connection.  Once I¡¯m finished I click submit, so now if I scroll down to the bottom of the list I will see the new PEER population that I just added.  
+
+You¡¯ll be able to tell which populations are default, and which are your own because you will be able to delete and modify PEER populations that you have made.  The defaults can¡¯t be changed. 
+
+So no we¡¯re going to look at how we create a test for last mile, and how we allocate those test to the PEER populations.  Again, we are going to go back to ¡°My Settings.¡±  And click on the ¡°add/edit¡± last mile test link under the test admin.  From here we¡¯re going to click on the ¡°add last mile test¡± link above the list.  Again, we¡¯re going to create a single URL test for ¡°google.com¡±.  So we¡¯re going to enter in the URL in the single URL field.  Again, if you do have a transaction that you have already recorded and uploaded to the GPN, you¡¯re going to be able to choose that transaction from the list, and create a transaction test.  In this case we¡¯re just going to use the single URL test.  Then you want to name your test. We are going to name this ¡°google home page.¡±  If it¡¯s a last mile test, a lot of times it will be indicated with a ¡°lm¡± or last mile at the end, that way if I¡¯m running a prospective report to compare my Backbone results to my Last Mile results it¡¯ll be easy for me to tell, from the name, which test is running on the backbone, and which test is running on the last mile. 
+
+Finally, we can choose to either activate the test with the default settings, or customize the set up orders.  Let¡¯s go ahead and customize the set-up orders so we can look at the rest of the steps.  When you¡¯re finished configuring the form, click continue.  The next step is to add your last mile tests that you just added to that form to either a single order or batch order.  
+
+Single Order and Batch Order are going to allow you to run your tests sequentially from the same machine.  For clarification:  In the last mile, you are choosing to run your tests on a population of machines, because there are thousands of machines in the population you selected, its not guaranteed that your tests are going to run from the same machines each hour, however, if you have multiple tests, and you want to compare the results of these tests closely, for each test you may want to run the tests in sequential order from the same machines to establish a common base for comparison.  From one test to the next they may be tested on different machines, but during that test period all tests will run from the same machine.  To accomplish this you need to add those tests to a batch order, and then that batch order will be provisioned to the different PEER populations.  In this example, we only have one test, so we¡¯re going to add a single order and provision the order to that single test, and really all you have to do is create a new batch order with this radio button, and choose which tests you want to add to that batch order, and then provision that batch order to run from the different PEER populations.  At this point we¡¯re going to choose create single orders, provision one at a time, and click continue.  
+
+The next screen we are going to be presented with is going to allow us to provision our test to run off of the PEER populations that we select.  Here, we¡¯re able to name the order, you can keep the same name as the test that you configured, or you can change it.  Then you want to change the status, if you want to activate the test at this point, choose the status ¡°active¡±, again there is an expiration date (very similar to the Backbone).  Once the date expires, it will retain the historical data, however the test will not be running.  Finally we have the frequency and PEER Populations.  Here you¡¯re going to choose or allocate your tests, and it¡¯ll tell you right underneath the title how many tests per hour that you are allowed to use.  You can allocate those 30 tests/hour to different PEER populations.  The number that appears between the all last mile PEER populations and selected PEER Populations field is going to tell you how PEERS you¡¯re allocating to the population you are selecting.  Once you¡¯ve configured your order or allocated your tests, click ¡°continue.¡± 
+
+You¡¯ll be brought back to the last added test and orders screen, and you¡¯ll be able to see your test, and that it has been activated.  
+
+Thank you very much for your time, have a good day.               
+

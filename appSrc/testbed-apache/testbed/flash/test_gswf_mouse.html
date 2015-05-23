@@ -1,0 +1,39 @@
+<html>
+<body bgcolor="silver">
+
+<script type="text/javascript">
+function onEvent(params) {
+   var result = document.getElementById("result"); 
+
+   //if (/click|dblclick/.test(params.toLowerCase())) {
+      result.innerHTML = params;
+   //}
+
+   //var p = document.createElement('p');
+   //p.innerHTML = params;
+   //result.insertBefore(p, result.firstChild);
+}
+</script>
+
+<table>
+<tr><td>wmode="windowed"</td><td>wmode="transparent"</td><td></tr>
+<tr><td>
+<embed 
+   height="300px" width="300px" wmode="windowed" allowfullscreen="true" quality="high" 
+   bgcolor="#FFFFFF" name="windowed" id="windowed"  src="test_gswf_mouse.swf" 
+   type="application/x-shockwave-flash"
+>
+</td>
+<td>
+<embed 
+   height="300px" width="300px" wmode="opaque" allowfullscreen="true" quality="high" 
+   bgcolor="#FFFFFF" name="transparent" id="transparent"  src="test_gswf_mouse.swf" 
+   type="application/x-shockwave-flash"
+>
+</td>
+</tr></table>
+<div id="result"></div>
+
+
+</body>
+</html>

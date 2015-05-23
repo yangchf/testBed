@@ -1,0 +1,22 @@
+<html>
+<body>
+
+<script type="text/javascript">
+	    //set signed.applets.codebase_principal_support == true in about:config
+	    //alert(this,"kang","kang");
+		netscape.security.PrivilegeManager.enablePrivilege('UniversalXPConnect');	
+		//alert("kang00");
+		var win = Components.classes["@mozilla.org/appshell/window-mediator;1"].getService(Components.interfaces.nsIWindowMediator).getMostRecentWindow("navigator:browser");			    
+		var sandbox = Components.utils.Sandbox(win);
+		//var sandbox = Components.utils.Sandbox("http://www.baidu.com");	
+		//var sandbox = new Object;
+        with(sandbox) {			
+	        eval("var actions = 7");
+			//alert(sandbox.actions);
+	    }	
+        //alert(actions);
+</script>
+</body>
+</html>
+
+		

@@ -1,0 +1,5 @@
+AuthType Basic
+AuthName zhuang
+AuthUserFile /usr/local/apache/passwd/zhuang
+require user zhuang
+

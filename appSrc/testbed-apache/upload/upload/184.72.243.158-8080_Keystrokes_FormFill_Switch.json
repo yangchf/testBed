@@ -1,0 +1,193 @@
+{
+    "steps": [{
+        "configurations": [],
+        "substitutions": [],
+        "url": "http://184.72.243.158:8080/hosted/get/htmlelements.html",
+        "description": "web elements",
+        "actions": [{
+            "url": "http://184.72.243.158:8080/hosted/get/htmlelements.html",
+            "targetWindow": "gomez_top[0]",
+            "type": "navigate"
+        },
+        {
+            "criteria": "page_complete",
+            "type": "wait"
+        }]
+    },
+    {
+        "configurations": [],
+        "substitutions": [],
+        "url": "http://184.72.243.158:8080/hosted/get/action.jsp?name=%3CCtrl-a%3ETest+Keystrokes&text2=%3CCtrl-a%3ETest+FormFill&textarea=This+is+a+Textarea.&SelectBox=one&SelectGroup=1111&Submit=Submit",
+        "description": "Welcome",
+        "actions": [{
+            "target": {
+                "targetWindow": "gomez_top[0]",
+                "locators": [["css", "input[type=\"text\"][name=\"name\"]"], ["dom", "document.forms[\"myform\"][\"name\"]"], ["css", "#myform table tbody tr td:eq(1) input"]]
+            },
+            "x": -36,
+            "y": 7,
+            "type": "click"
+        },
+        {
+            "target": {
+                "targetWindow": "gomez_top[0]",
+                "locators": [["css", "input[type=\"text\"][name=\"name\"]"], ["dom", "document.forms[\"myform\"][\"name\"]"], ["css", "#myform table tbody tr td:eq(1) input"]]
+            },
+            "textValue": "<C",
+            "modifiers": ["SHIFT"],
+            "type": "keystrokes",
+            "keyCodes": [188, 67],
+            "charCodes": [60, 67],
+            "selectionStart": [0, 1],
+            "selectionEnd": [18, 1]
+        },
+        {
+            "target": {
+                "targetWindow": "gomez_top[0]",
+                "locators": [["css", "input[type=\"text\"][name=\"name\"]"], ["dom", "document.forms[\"myform\"][\"name\"]"], ["css", "#myform table tbody tr td:eq(1) input"]]
+            },
+            "textValue": "<Ctrl-a",
+            "modifiers": [],
+            "type": "keystrokes",
+            "keyCodes": [84, 82, 76, 109, 65],
+            "charCodes": [116, 114, 108, 45, 97],
+            "selectionStart": [2, 3, 4, 5, 6],
+            "selectionEnd": [2, 3, 4, 5, 6]
+        },
+        {
+            "target": {
+                "targetWindow": "gomez_top[0]",
+                "locators": [["css", "input[type=\"text\"][name=\"name\"]"], ["dom", "document.forms[\"myform\"][\"name\"]"], ["css", "#myform table tbody tr td:eq(1) input"]]
+            },
+            "textValue": "<Ctrl-a>T",
+            "modifiers": ["SHIFT"],
+            "type": "keystrokes",
+            "keyCodes": [190, 84],
+            "charCodes": [62, 84],
+            "selectionStart": [7, 8],
+            "selectionEnd": [7, 8]
+        },
+        {
+            "target": {
+                "targetWindow": "gomez_top[0]",
+                "locators": [["css", "input[type=\"text\"][name=\"name\"]"], ["dom", "document.forms[\"myform\"][\"name\"]"], ["css", "#myform table tbody tr td:eq(1) input"]]
+            },
+            "textValue": "<Ctrl-a>Test ",
+            "modifiers": [],
+            "type": "keystrokes",
+            "keyCodes": [69, 83, 84, 32],
+            "charCodes": [101, 115, 116, 32],
+            "selectionStart": [9, 10, 11, 12],
+            "selectionEnd": [9, 10, 11, 12]
+        },
+        {
+            "target": {
+                "targetWindow": "gomez_top[0]",
+                "locators": [["css", "input[type=\"text\"][name=\"name\"]"], ["dom", "document.forms[\"myform\"][\"name\"]"], ["css", "#myform table tbody tr td:eq(1) input"]]
+            },
+            "textValue": "<Ctrl-a>Test K",
+            "modifiers": ["SHIFT"],
+            "type": "keystrokes",
+            "keyCodes": [75],
+            "charCodes": [75],
+            "selectionStart": [13],
+            "selectionEnd": [13]
+        },
+        {
+            "target": {
+                "targetWindow": "gomez_top[0]",
+                "locators": [["css", "input[type=\"text\"][name=\"name\"]"], ["dom", "document.forms[\"myform\"][\"name\"]"], ["css", "#myform table tbody tr td:eq(1) input"]]
+            },
+            "textValue": "<Ctrl-a>Test Keystrokes",
+            "modifiers": [],
+            "type": "keystrokes",
+            "keyCodes": [69, 89, 83, 84, 82, 79, 75, 69, 83],
+            "charCodes": [101, 121, 115, 116, 114, 111, 107, 101, 115],
+            "selectionStart": [14, 15, 16, 17, 18, 19, 20, 21, 22],
+            "selectionEnd": [14, 15, 16, 17, 18, 19, 20, 21, 22]
+        },
+        {
+            "target": {
+                "targetWindow": "gomez_top[0]",
+                "locators": [["css", "input[type=\"text\"][name=\"text2\"]"], ["dom", "document.forms[\"myform\"][1]"], ["css", "#myform table tbody tr:eq(1) td:eq(1) input"]]
+            },
+            "x": -3,
+            "y": 26,
+            "type": "click"
+        },
+        {
+            "target": {
+                "targetWindow": "gomez_top[0]",
+                "locators": [["css", "input[type=\"text\"][name=\"text2\"]"], ["dom", "document.forms[\"myform\"][1]"], ["css", "#myform table tbody tr:eq(1) td:eq(1) input"]]
+            },
+            "value": "input type is text2",
+            "type": "setInputValue"
+        },
+        {
+            "target": {
+                "targetWindow": "gomez_top[0]",
+                "locators": [["css", "input[type=\"text\"][name=\"text2\"]"], ["dom", "document.forms[\"myform\"][1]"], ["css", "#myform table tbody tr:eq(1) td:eq(1) input"]]
+            },
+            "x": -10,
+            "y": 13,
+            "type": "click"
+        },
+        {
+            "target": {
+                "targetWindow": "gomez_top[0]",
+                "locators": [["css", "input[type=\"text\"][name=\"text2\"]"], ["dom", "document.forms[\"myform\"][1]"], ["css", "#myform table tbody tr:eq(1) td:eq(1) input"]]
+            },
+            "value": "input type is text2",
+            "type": "setInputValue"
+        },
+        {
+            "target": {
+                "targetWindow": "gomez_top[0]",
+                "locators": [["css", "input[type=\"text\"][name=\"text2\"]"], ["dom", "document.forms[\"myform\"][1]"], ["css", "#myform table tbody tr:eq(1) td:eq(1) input"]]
+            },
+            "x": -14,
+            "y": 15,
+            "type": "click"
+        },
+        {
+            "target": {
+                "targetWindow": "gomez_top[0]",
+                "locators": [["css", "input[type=\"text\"][name=\"text2\"]"], ["dom", "document.forms[\"myform\"][1]"], ["css", "#myform table tbody tr:eq(1) td:eq(1) input"]]
+            },
+            "value": "<Ctrl-a>Test FormFill",
+            "type": "setInputValue"
+        },
+        {
+            "target": {
+                "targetWindow": "gomez_top[0]",
+                "locators": [["css", "input[type=\"submit\"][name=\"Submit\"]"], ["dom", "document.forms[\"myform\"][11]"], ["css", "#myform table tbody tr:eq(12) td:eq(1) input"]]
+            },
+            "x": 17,
+            "y": 14,
+            "type": "click"
+        },
+        {
+            "criteria": "page_complete",
+            "type": "wait"
+        }]
+    }],
+    "configurations": [{
+        "name": "http://www.gomez.com/settings/gsl_version",
+        "value": "2"
+    },
+    {
+        "name": "http://www.gomez.com/settings/browser_version",
+        "value": "IE7"
+    }],
+    "headers": [],
+    "parameters": [],
+    "mobileConfigurations": [],
+    "name": "184.72.243.158:8080",
+    "enableFlash": true,
+    "clientCerts": [],
+    "dns": [],
+    "enableForMobile": false,
+    "ipMode": "IPv4_only",
+    "enableOnLoadWait": true
+}
+

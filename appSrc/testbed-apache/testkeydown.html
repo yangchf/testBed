@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>web elements</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=UTF-8"></HEAD>
+
+<BODY >
+<TABLE style="PADDING-TOP: 3px;margin:12px 5% 12px 10%" cellSpacing=0 cellPadding=0 width=700 border=1>
+  <tr>
+  	 <td align=center> text </td>
+  	 <td align=center> <input id="testkey" type="text" name="name" value="" /></td>
+
+  </tr>
+<tr><td align=center>click to find the result</td><td align=center><input id="tt" type="button" name="submit" value="SUBMIT" onclick="doNothing();"/></td></tr>
+</TABLE>
+
+<script language="JavaScript" type="text/javascript">
+function doNothing(){
+    return ;
+}
+
+function deal(){
+var iValue = document.getElementById("testkey").value;
+document.getElementById("content").value = iValue;
+}
+
+</script>
+
+
+
+</BODY></HTML>	
+	
